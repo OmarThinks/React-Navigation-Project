@@ -5,11 +5,11 @@
  * @format
  */
 
-import React from 'react';
-import {SafeAreaView} from 'react-native';
-import {Home} from './screens/';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import React from 'react';
+import {Details, Home} from './screens/';
+
 const Stack = createNativeStackNavigator();
 
 function App(): JSX.Element {
@@ -17,6 +17,7 @@ function App(): JSX.Element {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Details" component={Details} />
       </Stack.Navigator>
     </NavigationContainer>
   );
