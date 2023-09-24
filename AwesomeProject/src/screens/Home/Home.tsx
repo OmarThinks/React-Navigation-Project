@@ -9,7 +9,13 @@ const Home = () => {
       <Text>Home</Text>
       <Button
         title="Navigate Home"
-        onPress={() => navigation.navigate('Home')}
+        onPress={() =>
+          navigation.navigate({
+            name: 'Home',
+            params: {},
+            merge: true,
+          })
+        }
       />
       <Button title="Push Home" onPress={() => navigation.push('Home')} />
       <Button
