@@ -9,6 +9,16 @@ function Details() {
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
       <Text>Details Screen</Text>
       <Button
+        title="Navigate Home With data"
+        onPress={() => {
+          navigation.navigate({
+            name: 'Home',
+            params: {data: 'data'},
+            merge: true,
+          });
+        }}
+      />
+      <Button
         title="Navigate Home"
         onPress={() => navigation.navigate('Home')}
       />

@@ -1,12 +1,15 @@
 import React from 'react';
 import {Text, View, Button} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
+import {useRoute} from '@react-navigation/native';
 
 const Home = () => {
   const navigation = useNavigation();
+  const data = (useRoute().params?.data as String | undefined) ?? '';
   return (
     <View>
       <Text>Home</Text>
+      <Text>{data}</Text>
       <Button
         title="Navigate Home"
         onPress={() =>
